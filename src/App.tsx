@@ -1,10 +1,13 @@
-
-function App() {
-
+const App: React.FC = () => {
   return (
-    <div>
-      Hello World
-    </div>
+    <form>
+      <input
+        id='dinosaur_name'
+        name='dinosaur_name'
+        className='dinosaur_name'
+        aria-describedby='dinosaur_name_info'
+      ></input>
+    </form>
   )
 }
 
