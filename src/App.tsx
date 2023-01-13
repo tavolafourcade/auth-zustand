@@ -1,13 +1,6 @@
 const App: React.FC = () => {
   return (
-    <form>
-      <input
-        id='dinosaur_name'
-        name='dinosaur_name'
-        className='dinosaur_name'
-        aria-describedby='dinosaur_name_info'
-      ></input>
-    </form>
+    <h1 className='font-serif text-5xl font-bold underline'>Hello world!</h1>
   )
 }
 

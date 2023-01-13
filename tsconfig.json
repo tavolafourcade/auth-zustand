@@ -22,6 +22,7 @@
   },
   "include": [
     ".eslintrc.cjs",
+    "./tailwind.config.cjs",
     "src"
   ],
   "references": [
