@@ -4,11 +4,7 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: [
-    'plugin:react/recommended',
-    'standard-with-typescript',
-    'plugin:prettier/recommended',
-  ],
+  extends: ['plugin:react/recommended', 'standard-with-typescript', 'plugin:prettier/recommended'],
   overrides: [
     // override "simple-import-sort" config
     {
@@ -41,10 +37,21 @@ module.exports = {
     sourceType: 'module',
     project: ['./tsconfig.json'],
   },
-  plugins: ['react', 'simple-import-sort', 'prettier', 'tailwindcss'],
+  plugins: ['react', 'simple-import-sort', 'prettier', 'tailwindcss', 'unused-imports'],
   rules: {
     'react/react-in-jsx-scope': 0,
     'simple-import-sort/exports': 'error',
+    'no-unused-vars': 'off',
+    'unused-imports/no-unused-imports': 'error',
+    'unused-imports/no-unused-vars': [
+      'warn',
+      {
+        vars: 'all',
+        varsIgnorePattern: '^_',
+        args: 'after-used',
+        argsIgnorePattern: '^_',
+      },
+    ],
     'prettier/prettier': [
       'error',
       {
@@ -53,6 +60,7 @@ module.exports = {
         semi: false,
         singleQuote: true,
         jsxSingleQuote: true,
+        printWidth: 120,
       },
     ],
     'jsx-quotes': ['error', 'prefer-single'],
